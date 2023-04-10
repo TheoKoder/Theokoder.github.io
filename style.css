@@ -55,7 +55,7 @@ h1{
 h3{
  font-family:'Edwardian Script ITC', cursive;
   font-weight: 400;
-  font-size:62px;
+  font-size:72px;
   text-shadow: 10px -5px linear-gradient(rgba(0, 0, 0, 0.50) blue);
   margin: 0 30px;
   padding: 85px 0 0 0;
@@ -100,7 +100,7 @@ li {
     justify-content: center; /* added justify-content */
     text-align: center;
     width: 100%;
-    -webkit-fonts-smoothing: antialiased;
+    fonts-smoothing: antialiased;
 }
 .grid>li {
   
@@ -122,14 +122,12 @@ li {
 }
 
 .box:hover{
-  padding:23px;
-  transform: scale(1.2);
+  padding:12px;
+  transform: scale(1.14);
   -webkit-transition: 0.5s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -moz-transition: 0.5s ease-in-out, -moz-transform 0.3s ease-in-out;
   transition: 0.5s ease-in-out, transform 0.3s ease-in-out;
-  justify-content: space-between;
   -webkit-font-smoothing: antialiased;
-  transform-style: preserve-3d;
   -webkit-filter: grayscale(0%);
   filter: greyscale(0%);
   opacity: 1.0;
@@ -146,8 +144,7 @@ li {
 }
 .img-3 {
     background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), url('funeral_service.jpg');
-    background-size: contain;
-    background-repeat: round;
+    background-size: cover;
     opacity: .50;
 }
 p {
@@ -163,12 +160,8 @@ footer{
 }
 .Centerheader {
   position: absolute;
+  display:flex;
   flex-basis:100%;
-  transform: translateX(-50%);
-  text-align: center;
-  background-size: cover;
-  border-radius: 05px 5px 5px 4px;
-  border-color:red;
   padding: 0 0 5px;
   height:70vh;
   width: 80%;

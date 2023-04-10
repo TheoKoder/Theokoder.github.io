@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="loader" content="width=device-width, initial=1.0">
+
+  <title>JavaScript Spinning Wheel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .spinner {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid #ccc;
+      border-top-color: #333;
+    }
+
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" style="display: none;"></div>
+  <div class="spinner">
+    <script>
+      const spinner = document.querySelector('.spinner');
+      let rotate = 0;
+      function spin() {
+        rotate += 6;
+        spinner.style.transform = `rotate(${rotate}deg)`;
+        requestAnimationFrame(spin);
+      }
+
+      // Call the spin function here
+      spin();
+
+      // Show the content after the spinner has completed its animation
+      setTimeout(() => {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 1500); // Set the delay to match the duration of the spinner animation
+
+    </script>
+  </div>
+
+</body>
+
+</html>
